@@ -3,7 +3,7 @@ import { identifyUSBProductId, ledgerUSBVendorId } from '@ledgerhq/devices';
 import { DisconnectedDevice, DisconnectedDeviceDuringOperation } from '@ledgerhq/errors';
 import Transport from '@ledgerhq/hw-transport';
 import { log } from '@ledgerhq/logs';
-import { concat, from, Subject } from 'rxjs/dist/types';
+import { concat, from, Subject } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 const CapacitorUSBPlugin = registerPlugin('CapacitorUSBPlugin', {
     web: () => import('./web').then(m => new m.CapacitorUSBPluginWeb()),

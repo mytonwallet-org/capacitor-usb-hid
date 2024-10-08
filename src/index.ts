@@ -5,7 +5,7 @@ import { DisconnectedDevice, DisconnectedDeviceDuringOperation } from '@ledgerhq
 import type { DescriptorEvent } from '@ledgerhq/hw-transport';
 import Transport from '@ledgerhq/hw-transport';
 import { log } from '@ledgerhq/logs';
-import { concat, from, Subject } from 'rxjs/dist/types';
+import { concat, from, Subject } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
 import type { CapacitorUSBPluginPlugin, ICapacitorUSBDevice } from './definitions';
