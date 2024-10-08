@@ -1,0 +1,177 @@
+{
+  "api": {
+    "name": "CapacitorUSBPluginPlugin",
+    "slug": "capacitorusbpluginplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getDeviceList",
+        "signature": "() => Promise<{ devices: ICapacitorUSBDevice[]; }>",
+        "parameters": [],
+        "returns": "Promise<{ devices: ICapacitorUSBDevice[]; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ICapacitorUSBDevice"
+        ],
+        "slug": "getdevicelist"
+      },
+      {
+        "name": "openDevice",
+        "signature": "(options: { deviceId: number; }) => Promise<{ success: boolean; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ deviceId: number; }"
+          }
+        ],
+        "returns": "Promise<{ success: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "opendevice"
+      },
+      {
+        "name": "exchange",
+        "signature": "(options: { deviceId: number; apduHex: string; }) => Promise<{ response: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ deviceId: number; apduHex: string; }"
+          }
+        ],
+        "returns": "Promise<{ response: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "exchange"
+      },
+      {
+        "name": "closeDevice",
+        "signature": "(options: { deviceId: number; }) => Promise<{ response: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ deviceId: number; }"
+          }
+        ],
+        "returns": "Promise<{ response: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "closedevice"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'onDeviceConnect', handler: (device: ICapacitorUSBDevice) => void) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'onDeviceConnect'"
+          },
+          {
+            "name": "handler",
+            "docs": "",
+            "type": "(device: ICapacitorUSBDevice) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "ICapacitorUSBDevice"
+        ],
+        "slug": "addlistenerondeviceconnect-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'onDeviceDisconnect', handler: (device: ICapacitorUSBDevice) => void) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'onDeviceDisconnect'"
+          },
+          {
+            "name": "handler",
+            "docs": "",
+            "type": "(device: ICapacitorUSBDevice) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "ICapacitorUSBDevice"
+        ],
+        "slug": "addlistenerondevicedisconnect-"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ICapacitorUSBDevice",
+      "slug": "icapacitorusbdevice",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "vendorId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "productId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
