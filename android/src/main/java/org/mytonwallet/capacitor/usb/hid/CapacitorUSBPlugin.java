@@ -28,6 +28,7 @@ public class CapacitorUSBPlugin extends Plugin {
     private UsbManager usbManager;
 
     private BroadcastReceiver usbReceiver;
+    private boolean usbReceiverRegistered = false;
 
     private static final String ACTION_USB_PERMISSION = "org.mytonwallet.capacitor.usb.hid.USB_PERMISSION";
 
@@ -58,13 +59,15 @@ public class CapacitorUSBPlugin extends Plugin {
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
         ContextCompat.registerReceiver(getContext(), usbReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
+        usbReceiverRegistered = true;
     }
 
     @Override
     protected void handleOnDestroy() {
         super.handleOnDestroy();
-        if (usbReceiver != null) {
+        if (usbReceiverRegistered && usbReceiver != null) {
             getContext().unregisterReceiver(usbReceiver);
+            usbReceiverRegistered = false;
         }
     }
 
