@@ -160,7 +160,11 @@ public class CapacitorUSBPlugin extends Plugin {
     }
 
     private void unregisterReceiver(BroadcastReceiver receiver) {
-        getActivity().getApplicationContext().unregisterReceiver(receiver);
+        try {
+            getActivity().getApplicationContext().unregisterReceiver(receiver);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void openSelectedDevice(UsbDevice device, @Nullable PluginCall call) {
