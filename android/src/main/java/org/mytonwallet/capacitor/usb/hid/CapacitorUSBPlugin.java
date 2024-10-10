@@ -151,9 +151,9 @@ public class CapacitorUSBPlugin extends Plugin {
                         } else {
                             p.reject("Permission denied by user for device");
                         }
+                        unregisterReceiver(this);
                     }
                 }
-                unregisterReceiver(this);
             }
         };
         ContextCompat.registerReceiver(getContext(), receiver, intFilter, ContextCompat.RECEIVER_NOT_EXPORTED);
