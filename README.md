@@ -134,3 +134,5 @@ addListener(eventName: 'onDeviceDisconnect', handler: (device: ICapacitorUSBDevi
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 </docgen-api>
+
+This project is tested with BrowserStack
