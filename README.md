@@ -1,11 +1,11 @@
-# mtw-capacitor-usb-hid
+# @mytonwallet/capacitor-usb-hid
 
 A Capacitor USB HID Plugin
 
 ## Install
 
 ```bash
-npm install mtw-capacitor-usb-hid
+npm install https://github.com/mytonwallet-org/capacitor-usb-hid
 npx cap sync
 ```
 

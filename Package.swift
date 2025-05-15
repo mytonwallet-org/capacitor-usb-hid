@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "MtwCapacitorUsbHid",
+    name: "MytonwalletCapacitorUsbHid",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "MtwCapacitorUsbHid",
+            name: "MytonwalletCapacitorUsbHid",
             targets: ["CapacitorUSBPluginPlugin"])
     ],
     dependencies: [

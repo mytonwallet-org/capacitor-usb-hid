@@ -1,5 +1,5 @@
 {
-  "name": "mtw-capacitor-usb-hid",
+  "name": "@mytonwallet/capacitor-usb-hid",
   "version": "0.0.1",
   "description": "A Capacitor USB HID Plugin",
   "main": "dist/plugin.cjs.js",
@@ -13,7 +13,7 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "MtwCapacitorUsbHid.podspec"
+    "MytonwalletCapacitorUsbHid.podspec"
   ],
   "author": "SinaKH",
   "license": "MIT",
@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme MtwCapacitorUsbHid -destination generic/platform=iOS",
+    "verify:ios": "xcodebuild -scheme MytonwalletCapacitorUsbHid -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
